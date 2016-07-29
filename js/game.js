@@ -118,6 +118,7 @@ var mouseSpawned = 0;
 var xDistance;
 var yDistance;
 var obstacleSpeed = 3;
+var tHeadSpeed = 15;
 
 var owlDead = false;
 
@@ -246,7 +247,7 @@ var update = function (modifier) {
 		}
 	}
 	if (tHeadSpawned == 1){
-		obstacleTHead.x-=obstacleSpeed;
+		obstacleTHead.x-=tHeadSpeed;
 		if (obstacleTHead.x <= -75){ //resets obstacle variables
 			obstacleTHead.x = canvas.width;
 			tHeadSpawned = 0;
